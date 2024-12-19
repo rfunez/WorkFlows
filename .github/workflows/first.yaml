@@ -10,5 +10,5 @@ jobs:
               run: echo "Hi"
             - name: Ckeckout
               uses: actions/checkout@v4
-            - name: Listing dir
+            - name: Listing workspace
               run: ls -latr
