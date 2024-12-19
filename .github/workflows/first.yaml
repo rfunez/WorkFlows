@@ -1,7 +1,7 @@
 name: FirstFlow
 on: 
     push: 
-        branches: ["develop"]
+        branches: ["develop","main"]
 jobs:
     build:
         runs-on: ubuntu:latest
