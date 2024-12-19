@@ -8,5 +8,7 @@ jobs:
         steps:
             - name: Greeting
               run: echo "Hi"
+            - name: Ckeckout
+              uses: actions/checkout@v4
             - name: Listing dir
               run: ls -latr
