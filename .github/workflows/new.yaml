@@ -3,7 +3,7 @@ on:
     push: 
         branches: ["main" ,"develop"]
 jobs:
-    "check_environment":
+    "docker nginx":
         runs-on: ubuntu-latest
         steps:
             - name: ls
@@ -11,5 +11,11 @@ jobs:
             - name: docker_setup
               uses: docker/setup-docker-action@v4
             - name: check_docker
-              run: "docker --version"  
+              run: "docker --version"
+            - name: check out
+              uses: actions/checkout@v4
+            - name: build image
+              run: "ls ; docker build -t nginx:1.0.0 ."
+            - name: check image
+              run: "docker image ls" 
     
