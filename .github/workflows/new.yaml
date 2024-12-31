@@ -1,0 +1,9 @@
+name: DockerFlow
+on: 
+    push: 
+        branches: ["main" ,"develop"]
+jobs:
+    "check environment":
+        steps:
+            - name: ls
+              run: pwd
