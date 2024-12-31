@@ -3,7 +3,7 @@ on:
     push: 
         branches: ["main" ,"develop"]
 jobs:
-    "docker nginx":
+    "docker-nginx":
         runs-on: ubuntu-latest
         steps:
             - name: ls
