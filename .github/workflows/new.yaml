@@ -8,3 +8,8 @@ jobs:
         steps:
             - name: ls
               run: pwd
+            - name: docker_setup
+              uses: docker/setup-docker-action@v4
+            - name: check_docker
+              run: "docker --version"  
+    
