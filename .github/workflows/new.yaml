@@ -4,6 +4,7 @@ on:
         branches: ["main" ,"develop"]
 jobs:
     "check environment":
+        runs-on: ubuntu-latest
         steps:
             - name: ls
               run: pwd
