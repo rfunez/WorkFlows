@@ -18,4 +18,8 @@ jobs:
               run: "ls ; docker build -t nginx:1.0.0 ."
             - name: check image
               run: "docker image ls" 
+            - name: run docker
+              run: "docker run --name=nginx --hostname=nginx -itd -p 80:80 nginx:1.0.0"
+            - name: check docker
+              run: "docker ps -a"
     
